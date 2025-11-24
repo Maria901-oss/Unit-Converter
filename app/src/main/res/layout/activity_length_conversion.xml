@@ -53,8 +53,8 @@
             android:layout_marginLeft="12dp"
             android:layout_marginRight="12dp"
             android:background="@drawable/circle_bg"
-            android:padding="10dp"
-            android:src="@drawable/ic_swap_arrow" />
+            android:padding="10dp"/>
+            <!--android:src="@drawable/ic_swap_arrow"-->
 
         <Spinner
             android:id="@+id/toUnit"

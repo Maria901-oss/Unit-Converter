@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -29,21 +30,23 @@
             <!-- Length Button -->
             <Button
                 android:layout_width="0dp"
-                android:layout_height="120dp"
+                android:layout_height="150dp"
                 android:layout_margin="8dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:text="Length"
+                android:background="@drawable/button"
                 android:textSize="18sp" />
 
             <!-- Weight Button -->
             <Button
                 android:layout_width="0dp"
-                android:layout_height="120dp"
+                android:layout_height="150dp"
                 android:layout_margin="8dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:text="Weight"
+                android:background="@drawable/button"
                 android:textSize="18sp" />
 
             <!-- Row 2 -->
@@ -51,21 +54,23 @@
             <!-- Temperature Button -->
             <Button
                 android:layout_width="0dp"
-                android:layout_height="120dp"
+                android:layout_height="150dp"
                 android:layout_margin="8dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:text="Temperature"
+                android:background="@drawable/button"
                 android:textSize="18sp" />
 
             <!-- Volume Button -->
             <Button
                 android:layout_width="0dp"
-                android:layout_height="120dp"
+                android:layout_height="150dp"
                 android:layout_margin="8dp"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
                 android:text="Volume"
+                android:background="@drawable/button"
                 android:textSize="18sp" />
 
         </GridLayout>
