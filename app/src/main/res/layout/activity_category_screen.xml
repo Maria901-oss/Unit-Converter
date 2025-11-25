@@ -13,14 +13,19 @@
             android:textSize="24sp"
             android:textStyle="bold"
             android:gravity="center"
+            android:layout_marginTop="50dp"
             android:layout_marginBottom="32dp"
             android:textColor="#000000" />
-        <!-- Grid Layout for buttons -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!-- Grid Layout for buttons -->
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:columnCount="2"
-            android:rowCount="2"
+            android:rowCount="5"
             android:alignmentMode="alignMargins"
             android:columnOrderPreserved="false"
             android:padding="8dp">
@@ -72,7 +77,61 @@
                 android:text="Volume"
                 android:background="@drawable/button"
                 android:textSize="18sp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="Area"
+                android:background="@drawable/button"
+                android:textSize="18sp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="Speed"
+                android:background="@drawable/button"
+                android:textSize="18sp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="Time"
+                android:background="@drawable/button"
+                android:textSize="18sp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="Pressure"
+                android:background="@drawable/button"
+                android:textSize="18sp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="Energy"
+                android:background="@drawable/button"
+                android:textSize="18sp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:text="Data storage"
+                android:background="@drawable/button"
+                android:textSize="18sp" />
 
         </GridLayout>
-
+    </ScrollView>
 </LinearLayout>
