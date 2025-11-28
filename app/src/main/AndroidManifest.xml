@@ -12,12 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UnitConverter">
         <activity
+            android:name=".lengthconversion"
+            android:exported="false" />
+        <activity
             android:name=".lengthConversion"
             android:exported="false" />
         <activity
             android:name=".categoryScreen"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#F5F7FB"
+    tools:context=".lengthconversion">
+
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Length Converter"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_gravity="center"
+            android:paddingBottom="20dp" />
+
+        <!-- Input Box -->
+        <EditText
+            android:id="@+id/inputValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Value"
+            android:inputType="numberDecimal"
+            android:padding="14dp"
+            android:textSize="16sp"
+            android:textColor="#111827"
+            android:textColorHint="#9CA3AF"
+            android:background="@drawable/input_box" />
+
+        <!-- Row for From & To -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <Spinner
+                android:id="@+id/fromUnit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:background="@drawable/spinner_box" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/circle_bg"
+                android:padding="10dp"/>
+            <!--android:src="@drawable/ic_swap_arrow"-->
+
+            <Spinner
+                android:id="@+id/toUnit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:background="@drawable/spinner_box" />
+        </LinearLayout>
+
+        <!-- Convert Button -->
+        <Button
+            android:id="@+id/btnConvert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Convert"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="24dp"
+            android:background="#4F46E5"
+            android:textColor="#FFFFFF"
+            android:padding="14dp" />
+
+        <!-- Result Box -->
+        <LinearLayout
+            android:id="@+id/resultBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/result_box"
+            android:padding="18dp"
+            android:layout_marginTop="28dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/resultText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00000"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#4F46E5" />
+
+            <TextView
+                android:id="@+id/unitName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unit"
+                android:textSize="16sp"
+                android:textColor="#111827"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Copy Button -->
+        <Button
+            android:id="@+id/btnCopy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Copy Result"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:background="#4F46E5"
+            android:textColor="#FFFFFF"
+            android:padding="14dp" />
+
+
+</LinearLayout>
