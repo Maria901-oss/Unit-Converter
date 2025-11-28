@@ -40,12 +40,15 @@
             <Button
                 android:id="@+id/length"
                 android:layout_width="0dp"
-                android:layout_height="150dp"
+                android:layout_height="160dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
+                android:paddingTop="24dp"
                 android:background="@drawable/button"
                 android:text="Length"
+                android:drawableTop="@drawable/length"
+                android:gravity="center"
                 android:textSize="18sp" />
 
             <Button
@@ -55,8 +58,12 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
+                android:paddingTop="24dp"
+                android:drawablePadding="2dp"
                 android:background="@drawable/button"
                 android:text="Volume"
+                android:drawableTop="@drawable/volume"
+                android:gravity="center"
                 android:textSize="18sp" />
 
             <Button
@@ -66,8 +73,11 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
+                android:paddingTop="24dp"
                 android:background="@drawable/button"
                 android:text="Temperature"
+                android:drawableTop="@drawable/temprature"
+                android:gravity="center"
                 android:textSize="18sp" />
 
             <Button
@@ -77,8 +87,11 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
+                android:paddingTop="24dp"
                 android:background="@drawable/button"
                 android:text="Weight"
+                android:drawableTop="@drawable/weight"
+                android:gravity="center"
                 android:textSize="18sp" />
 
             <Button
@@ -88,8 +101,11 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
+                android:paddingTop="24dp"
                 android:background="@drawable/button"
                 android:text="Area"
+                android:drawableTop="@drawable/area"
+                android:gravity="center"
                 android:textSize="18sp" />
 
             <Button
@@ -99,8 +115,11 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
+                android:paddingTop="24dp"
                 android:background="@drawable/button"
                 android:text="Speed"
+                android:drawableTop="@drawable/speed"
+                android:gravity="center"
                 android:textSize="18sp" />
 
             <Button
@@ -110,8 +129,11 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
+                android:paddingTop="24dp"
                 android:background="@drawable/button"
                 android:text="Time"
+                android:drawableTop="@drawable/time"
+                android:gravity="center"
                 android:textSize="18sp" />
 
             <Button
@@ -121,8 +143,11 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
+                android:paddingTop="24dp"
                 android:background="@drawable/button"
                 android:text="Pressure"
+                android:drawableTop="@drawable/length"
+                android:gravity="center"
                 android:textSize="18sp" />
 
             <Button
@@ -132,6 +157,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
+                android:paddingTop="24dp"
                 android:background="@drawable/button"
                 android:text="Energy"
                 android:textSize="18sp" />
@@ -143,6 +169,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
+                android:paddingTop="24dp"
                 android:background="@drawable/button"
                 android:text="Data Storage"
                 android:textSize="18sp" />
