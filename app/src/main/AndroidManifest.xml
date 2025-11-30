@@ -12,23 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UnitConverter">
         <activity
-            android:name=".lengthconversion"
-            android:exported="false" />
+            android:name=".SplashScreen"
+            android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
         <activity
-            android:name=".lengthConversion"
-            android:exported="false" />
-        <activity
-            android:name=".categoryScreen"
+            android:name=".conversion"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="false"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+
     </application>
 
 </manifest>

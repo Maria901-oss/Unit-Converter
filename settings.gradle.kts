@@ -17,6 +17,9 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
     }
+    repositories {
+        maven(url = "https://jitpack.io")
+    }
 }
 
 rootProject.name = "Unit-Converter"

@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="60dp"
+    android:layout_marginTop="40dp"
     tools:context=".MainActivity">
     <TextView
         android:layout_width="match_parent"
@@ -16,7 +16,8 @@
         android:textColor="#000000"
         android:gravity="center"
         android:padding="20dp"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -46,6 +47,7 @@
                 android:layout_margin="8dp"
                 android:paddingTop="24dp"
                 android:background="@drawable/button"
+                android:backgroundTint="@null"
                 android:text="Length"
                 android:drawableTop="@drawable/length"
                 android:gravity="center"
@@ -63,6 +65,8 @@
                 android:background="@drawable/button"
                 android:text="Volume"
                 android:drawableTop="@drawable/volume"
+                android:backgroundTint="@null"
+
                 android:gravity="center"
                 android:textSize="18sp" />
 
@@ -76,7 +80,9 @@
                 android:paddingTop="24dp"
                 android:background="@drawable/button"
                 android:text="Temperature"
-                android:drawableTop="@drawable/temprature"
+                android:backgroundTint="@null"
+
+                android:drawableTop="@drawable/temperature"
                 android:gravity="center"
                 android:textSize="18sp" />
 
@@ -89,6 +95,8 @@
                 android:layout_margin="8dp"
                 android:paddingTop="24dp"
                 android:background="@drawable/button"
+                android:backgroundTint="@null"
+
                 android:text="Weight"
                 android:drawableTop="@drawable/weight"
                 android:gravity="center"
@@ -100,6 +108,8 @@
                 android:layout_height="150dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
+                android:backgroundTint="@null"
+
                 android:layout_margin="8dp"
                 android:paddingTop="24dp"
                 android:background="@drawable/button"
@@ -116,6 +126,8 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
                 android:paddingTop="24dp"
+                android:backgroundTint="@null"
+
                 android:background="@drawable/button"
                 android:text="Speed"
                 android:drawableTop="@drawable/speed"
@@ -130,6 +142,8 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
                 android:paddingTop="24dp"
+                android:backgroundTint="@null"
+
                 android:background="@drawable/button"
                 android:text="Time"
                 android:drawableTop="@drawable/time"
@@ -144,6 +158,8 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
                 android:paddingTop="24dp"
+                android:backgroundTint="@null"
+
                 android:background="@drawable/button"
                 android:text="Pressure"
                 android:drawableTop="@drawable/pressure"
@@ -158,6 +174,8 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
                 android:paddingTop="24dp"
+                android:backgroundTint="@null"
+
                 android:background="@drawable/button"
                 android:text="Energy"
                 android:drawableTop="@drawable/energy"
@@ -172,6 +190,8 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
                 android:paddingTop="24dp"
+                android:backgroundTint="@null"
+
                 android:background="@drawable/button"
                 android:text="Data Storage"
                 android:drawableTop="@drawable/data"

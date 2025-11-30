@@ -1,8 +1,6 @@
 package com.example.unit_converter
 
 import android.content.Intent
-import android.health.connect.datatypes.units.Pressure
-import android.health.connect.datatypes.units.Volume
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
@@ -36,13 +34,13 @@ class MainActivity : AppCompatActivity() {
         Pressure.setOnClickListener { openConverter("Pressure") }
         Weight.setOnClickListener { openConverter("Weight") }
         Speed.setOnClickListener { openConverter("Speed") }
-        Storage.setOnClickListener { openConverter("Storage") }
+        Storage.setOnClickListener { openConverter("Data storage") }
         Energy.setOnClickListener { openConverter("Energy") }
         Volume.setOnClickListener { openConverter("Volume") }
-        Temp.setOnClickListener { openConverter("Temp") }
+        Temp.setOnClickListener { openConverter("Temperature") }
     }
     private fun openConverter(category: String){
-    val intent= Intent(this, lengthconversion::class.java)
+    val intent= Intent (this, conversion::class.java)
         intent.putExtra("category",category)
         startActivity(intent)
     }
