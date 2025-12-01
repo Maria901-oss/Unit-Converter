@@ -5,8 +5,12 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="40dp"
-    tools:context=".MainActivity">
+    android:layout_marginTop="0dp"
+    android:padding="10dp"
+    tools:context=".MainActivity"
+    android:elevation="2dp">
+
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,6 +21,7 @@
         android:gravity="center"
         android:padding="20dp"
         android:textSize="20sp"
+
         />
     <ScrollView
         android:layout_width="match_parent"
@@ -38,7 +43,7 @@
             android:padding="8dp"
             android:rowCount="5">
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/length"
                 android:layout_width="0dp"
                 android:layout_height="160dp"
@@ -46,14 +51,15 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
                 android:paddingTop="24dp"
-                android:background="@drawable/button"
-                android:backgroundTint="@null"
+                app:backgroundTint="@android:color/white"
                 android:text="Length"
+                android:textColor="#Ff0099cc"
                 android:drawableTop="@drawable/length"
                 android:gravity="center"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:elevation="8dp"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/volume"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
@@ -62,15 +68,16 @@
                 android:layout_margin="8dp"
                 android:paddingTop="24dp"
                 android:drawablePadding="2dp"
-                android:background="@drawable/button"
+
                 android:text="Volume"
+                android:textColor="#Ff0099cc"
                 android:drawableTop="@drawable/volume"
-                android:backgroundTint="@null"
-
+                app:backgroundTint="@android:color/white"
                 android:gravity="center"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:elevation="8dp"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/temp"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
@@ -78,15 +85,16 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
                 android:paddingTop="24dp"
-                android:background="@drawable/button"
-                android:text="Temperature"
-                android:backgroundTint="@null"
 
+                android:text="Temperature"
+                android:textColor="#Ff0099cc"
+                app:backgroundTint="@android:color/white"
                 android:drawableTop="@drawable/temperature"
                 android:gravity="center"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:elevation="8dp"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/weight"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
@@ -95,30 +103,32 @@
                 android:layout_margin="8dp"
                 android:paddingTop="24dp"
                 android:background="@drawable/button"
-                android:backgroundTint="@null"
-
+                app:backgroundTint="@android:color/white"
                 android:text="Weight"
+                android:textColor="#Ff0099cc"
                 android:drawableTop="@drawable/weight"
                 android:gravity="center"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:elevation="8dp"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/area"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1"
-                android:backgroundTint="@null"
-
+                app:backgroundTint="@android:color/white"
                 android:layout_margin="8dp"
                 android:paddingTop="24dp"
                 android:background="@drawable/button"
                 android:text="Area"
+                android:textColor="#Ff0099cc"
                 android:drawableTop="@drawable/area"
                 android:gravity="center"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:elevation="8dp"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/speed"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
@@ -126,15 +136,16 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
                 android:paddingTop="24dp"
-                android:backgroundTint="@null"
-
+                app:backgroundTint="@android:color/white"
                 android:background="@drawable/button"
                 android:text="Speed"
+                android:textColor="#Ff0099cc"
                 android:drawableTop="@drawable/speed"
                 android:gravity="center"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:elevation="8dp"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/time"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
@@ -142,15 +153,16 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
                 android:paddingTop="24dp"
-                android:backgroundTint="@null"
-
+                app:backgroundTint="@android:color/white"
                 android:background="@drawable/button"
                 android:text="Time"
+                android:textColor="#Ff0099cc"
                 android:drawableTop="@drawable/time"
                 android:gravity="center"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:elevation="8dp"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/pressure"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
@@ -158,15 +170,17 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
                 android:paddingTop="24dp"
-                android:backgroundTint="@null"
-
                 android:background="@drawable/button"
                 android:text="Pressure"
+                android:textColor="#Ff0099cc"
                 android:drawableTop="@drawable/pressure"
                 android:gravity="center"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                app:backgroundTint="@android:color/white"
+                android:elevation="8dp"
+                />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/energy"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
@@ -174,15 +188,16 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
                 android:paddingTop="24dp"
-                android:backgroundTint="@null"
-
+                app:backgroundTint="@android:color/white"
                 android:background="@drawable/button"
                 android:text="Energy"
+                android:textColor="#Ff0099cc"
                 android:drawableTop="@drawable/energy"
                 android:gravity="center"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:elevation="8dp"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/data"
                 android:layout_width="0dp"
                 android:layout_height="150dp"
@@ -190,13 +205,14 @@
                 android:layout_columnWeight="1"
                 android:layout_margin="8dp"
                 android:paddingTop="24dp"
-                android:backgroundTint="@null"
-
+                app:backgroundTint="@android:color/white"
                 android:background="@drawable/button"
                 android:text="Data Storage"
+                android:textColor="#Ff0099cc"
                 android:drawableTop="@drawable/data"
                 android:gravity="center"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:elevation="8dp"/>
 
 
         </GridLayout>
