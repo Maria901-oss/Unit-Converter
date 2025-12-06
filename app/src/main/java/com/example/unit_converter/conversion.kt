@@ -1,6 +1,10 @@
 package com.example.unit_converter
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.*
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -21,6 +25,7 @@ private lateinit var btnCopy: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
         setContentView(R.layout.activity_conversion)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -29,10 +34,7 @@ private lateinit var btnCopy: Button
             insets
         }
 
-        // Get selected category from previous screen
         selectedCategory = intent.getStringExtra("category") ?: "Length"
-        Toast.makeText(this, " You Select Category = $selectedCategory ", Toast.LENGTH_LONG).show()
-
         // Initialize views
         inputValue = findViewById(R.id.inputValue)
         fromUnit = findViewById(R.id.fromUnit)
@@ -40,10 +42,8 @@ private lateinit var btnCopy: Button
         resultText = findViewById(R.id.resultText)
         btnConvert = findViewById(R.id.btnConvert)
 
-        // Load units based on category
         loadUnits()
 
-        // Button click listener
         btnConvert.setOnClickListener {
             convertUnits()
         }
@@ -74,7 +74,6 @@ private lateinit var btnCopy: Button
 
     }
 
-    // ----------------- UNIT LISTS ---------------------
 
     private val lengthUnits = mapOf(
         "Meter" to 1.0,
@@ -156,7 +155,6 @@ private lateinit var btnCopy: Button
         "Kelvin"
     )
 
-    // ----------------- LOAD UNITS ---------------------
 
     private fun loadUnits() {
 
@@ -193,8 +191,6 @@ private lateinit var btnCopy: Button
         toUnit.adapter = adapter
     }
 
-
-    // ----------------- CONVERSION LOGIC ---------------------
 
     private fun convertUnits() {
         val valueStr = inputValue.text.toString()
@@ -242,7 +238,6 @@ private lateinit var btnCopy: Button
         resultText.text = "%.5f $to".format(result)
     }
 
-    // ------------- TEMPERATURE SPECIAL LOGIC ----------------
 
     private fun convertTemperature(value: Double, from: String, to: String): Double {
 
@@ -261,5 +256,37 @@ private lateinit var btnCopy: Button
             "Kelvin" -> celsius + 273.15
             else -> celsius
         }
+    }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.optionmenu,menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId){
+            R.id.setting->{
+                Toast.makeText(this,"Setting clicked",Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.rate->{
+                Toast.makeText(this,"Opening Play Store",Toast.LENGTH_SHORT).show()
+                try {
+                    val uri = Uri.parse("market://details?id=$packageName")
+                    val intent = Intent(Intent.ACTION_VIEW, uri)
+                    startActivity(intent)
+                } catch (e: Exception) {
+                    // If Play Store not available, open browser
+                    val uri = Uri.parse("https://play.google.com/store/apps/details?id=$packageName")
+                    val intent = Intent(Intent.ACTION_VIEW, uri)
+                    startActivity(intent)
+                }
+                true
+            }
+            R.id.help->{
+                Toast.makeText(this,"FAQS clicked",Toast.LENGTH_SHORT).show()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+
     }
 }

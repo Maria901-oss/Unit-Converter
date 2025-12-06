@@ -6,6 +6,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SplashScreen">
+    <TextView
+        android:id="@+id/splash_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UNIT CONVERTER"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toTopOf="@id/lottie_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 <!--
     <com.lottiefiles.dotlottie.core.widget.DotLottieAnimation
         android:id="@+id/lottie_view"

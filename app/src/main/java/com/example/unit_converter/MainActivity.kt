@@ -1,8 +1,12 @@
 package com.example.unit_converter
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -11,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -18,7 +23,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        val Length=findViewById<Button>(R.id.length)
+       val Length=findViewById<Button>(R.id.length)
         val Area=findViewById<Button>(R.id.area)
         val Volume=findViewById<Button>(R.id.volume)
         val Temp=findViewById<Button>(R.id.temp)
@@ -39,9 +44,43 @@ class MainActivity : AppCompatActivity() {
         Volume.setOnClickListener { openConverter("Volume") }
         Temp.setOnClickListener { openConverter("Temperature") }
     }
-    private fun openConverter(category: String){
-    val intent= Intent (this, conversion::class.java)
+        private fun openConverter(category: String){
+        val intent= Intent (this, conversion::class.java)
         intent.putExtra("category",category)
         startActivity(intent)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.optionmenu,menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId){
+            R.id.setting->{
+                Toast.makeText(this,"Setting clicked",Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.rate->{
+                Toast.makeText(this,"Opening Play Store",Toast.LENGTH_SHORT).show()
+                try {
+                    val uri = Uri.parse("market://details?id=$packageName")
+                    val intent = Intent(Intent.ACTION_VIEW, uri)
+                    startActivity(intent)
+                } catch (e: Exception) {
+                    // If Play Store not available, open browser
+                    val uri = Uri.parse("https://play.google.com/store/apps/details?id=$packageName")
+                    val intent = Intent(Intent.ACTION_VIEW, uri)
+                    startActivity(intent)
+                }
+                true
+            }
+            R.id.help->{
+                Toast.makeText(this,"help clicked",Toast.LENGTH_SHORT).show()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+
     }
 }
