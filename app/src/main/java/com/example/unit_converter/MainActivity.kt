@@ -58,7 +58,8 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
             R.id.setting->{
-                Toast.makeText(this,"Setting clicked",Toast.LENGTH_SHORT).show()
+                val intent= Intent(this, settings::class.java)
+                startActivity(intent)
                 true
             }
             R.id.rate->{
