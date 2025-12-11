@@ -11,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.airbnb.lottie.LottieDrawable
 import com.example.unit_converter.databinding.ActivitySplashScreenBinding
 
+
 class SplashScreen : AppCompatActivity() {
 
     private lateinit var binding: ActivitySplashScreenBinding

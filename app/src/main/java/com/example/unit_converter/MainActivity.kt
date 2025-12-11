@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
     }
         private fun openConverter(category: String){
         val intent= Intent (this, conversion::class.java)
-        intent.putExtra("category",category)
+        intent.putExtra ("category",category)
         startActivity(intent)
     }
 
