@@ -1,6 +1,7 @@
 package com.example.unit_converter
 
 import android.os.Bundle
+import android.view.View
 import android.widget.RadioGroup
 import android.widget.SeekBar
 import android.widget.TextView
@@ -9,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.appbar.MaterialToolbar
 import java.text.DecimalFormat
 
 class settings : AppCompatActivity() {
@@ -20,6 +22,7 @@ class settings : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         enableEdgeToEdge()
         setContentView(R.layout.activity_settings)
 
@@ -28,16 +31,21 @@ class settings : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        window.statusBarColor = getColor(android.R.color.white)
+        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+        val toolbar = findViewById<MaterialToolbar>(R.id.settingsToolbar)
+
+        toolbar.setNavigationOnClickListener {
+            finish()
+        }
 
         themeRadioGroup = findViewById(R.id.themeRadioGroup)
         numberFormatRadioGroup = findViewById(R.id.numberFormatRadioGroup)
         decimalSeekBar = findViewById(R.id.decimalSeekBar)
         decimalValueText = findViewById(R.id.decimalValueText)
 
-        // Load saved settings first
         loadSettings()
 
-        // Theme change listener
         themeRadioGroup.setOnCheckedChangeListener { _, checkedId ->
             when (checkedId) {
                 R.id.themeDefault -> applyTheme("default")
@@ -46,7 +54,6 @@ class settings : AppCompatActivity() {
             }
         }
 
-        // Number format listener
         numberFormatRadioGroup.setOnCheckedChangeListener { _, checkedId ->
             when (checkedId) {
                 R.id.formatGeneral -> saveNumberFormat("general")
@@ -55,7 +62,6 @@ class settings : AppCompatActivity() {
             }
         }
 
-        // Decimal places SeekBar listener
         decimalSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 decimalValueText.text = progress.toString()
@@ -90,39 +96,20 @@ class settings : AppCompatActivity() {
     private fun loadSettings() {
         val prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
 
-        // Theme
         when (prefs.getString("theme", "default")) {
             "default" -> themeRadioGroup.check(R.id.themeDefault)
             "light" -> themeRadioGroup.check(R.id.themeLight)
             "dark" -> themeRadioGroup.check(R.id.themeDark)
         }
 
-        // Number Format
         when (prefs.getString("numberFormat", "general")) {
             "general" -> numberFormatRadioGroup.check(R.id.formatGeneral)
             "thousands" -> numberFormatRadioGroup.check(R.id.formatThousands)
             "scientific" -> numberFormatRadioGroup.check(R.id.formatScientific)
         }
 
-        // Decimal Places
         val decimal = prefs.getInt("decimalPlaces", 2)
         decimalSeekBar.progress = decimal
         decimalValueText.text = decimal.toString()
-    }
-
-    fun formatNumber(value: Double): String {
-        val prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE)
-        val formatType = prefs.getString("numberFormat", "general") ?: "general"
-        val decimals = prefs.getInt("decimalPlaces", 2)
-
-        return when (formatType) {
-            "general" -> "%.${decimals}f".format(value)
-            "thousands" -> {
-                val pattern = "#,##0.${"0".repeat(decimals)}"
-                DecimalFormat(pattern).format(value)
-            }
-            "scientific" -> "%.${decimals}E".format(value)
-            else -> value.toString()
-        }
     }
 }
