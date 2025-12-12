@@ -4,6 +4,7 @@
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="Theme.UnitConverter" parent="Base.Theme.UnitConverter" />

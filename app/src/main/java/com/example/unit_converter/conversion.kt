@@ -10,7 +10,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-
+import java.text.DecimalFormat
 class conversion : AppCompatActivity() {
 
     private lateinit var inputValue: EditText
@@ -235,7 +235,7 @@ private lateinit var btnCopy: Button
             else -> 0.0
         }
 
-        resultText.text = "%.5f $to".format(result)
+        resultText.text = formatNumber(result)
     }
 
 
@@ -257,6 +257,23 @@ private lateinit var btnCopy: Button
             else -> celsius
         }
     }
+    private fun formatNumber(value: Double): String {
+        val prefs = getSharedPreferences("AppSettings", MODE_PRIVATE)
+        val formatType = prefs.getString("numberFormat","general") ?: "general"
+        val decimals = prefs.getInt("decimalPlaces",2)
+        val unit = toUnit.selectedItem.toString()  // ← Use selected item text
+
+        return when(formatType) {
+            "general" -> "%.${decimals}f $unit".format(value)
+            "thousands" -> {
+                val pattern = "#,##0.${"0".repeat(decimals)}"
+                DecimalFormat(pattern).format(value) + " $unit"
+            }
+            "scientific" -> "%.${decimals}E $unit".format(value)
+            else -> "$value $unit"
+        }
+    }
+
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.optionmenu,menu)
         return true
@@ -264,7 +281,8 @@ private lateinit var btnCopy: Button
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
             R.id.setting->{
-                Toast.makeText(this,"Setting clicked",Toast.LENGTH_SHORT).show()
+                val intent= Intent(this, settings::class.java)
+                startActivity(intent)
                 true
             }
             R.id.rate->{
