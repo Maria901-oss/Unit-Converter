@@ -3,8 +3,8 @@
     <style name="Base.Theme.UnitConverter" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="android:background">@color/background</item>
-        <item name="android:text">@color/text</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="Theme.UnitConverter" parent="Base.Theme.UnitConverter" />
