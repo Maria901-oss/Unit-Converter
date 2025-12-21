@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@color/bg_main">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/settingsToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         app:title="Settings"
-        app:titleTextColor="@color/black"
+        android:background="@color/bg_main"
+        app:titleTextColor="@color/text_primary"
         app:navigationIcon="@drawable/outline_arrow_back_24" />
 
     <ScrollView
@@ -32,7 +32,7 @@
                 android:text="App Theme"
                 android:textStyle="bold"
                 android:textSize="18sp"
-                android:textColor="@color/black"
+                android:textColor="@color/text_primary"
                 android:paddingBottom="12dp"/>
 
             <RadioGroup
@@ -46,21 +46,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Default"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/text_primary"/>
 
                 <RadioButton
                     android:id="@+id/themeLight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Light"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/text_primary"/>
 
                 <RadioButton
                     android:id="@+id/themeDark"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Dark"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/text_primary"/>
             </RadioGroup>
 
             <TextView
@@ -69,7 +69,7 @@
                 android:text="Number Format"
                 android:textStyle="bold"
                 android:textSize="18sp"
-                android:textColor="@color/black"
+                android:textColor="@color/text_primary"
                 android:paddingTop="16dp"
                 android:paddingBottom="12dp"/>
 
@@ -84,21 +84,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="General Decimal"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/text_primary"/>
 
                 <RadioButton
                     android:id="@+id/formatThousands"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Thousands Separator"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/text_primary"/>
 
                 <RadioButton
                     android:id="@+id/formatScientific"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Scientific"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/text_primary"/>
             </RadioGroup>
 
             <TextView
@@ -107,7 +107,7 @@
                 android:text="Decimal Places (0 to 10)"
                 android:textStyle="bold"
                 android:textSize="18sp"
-                android:textColor="@color/black"
+                android:textColor="@color/text_primary"
                 android:paddingTop="16dp"
                 android:paddingBottom="12dp"/>
 
@@ -117,8 +117,8 @@
                 android:layout_height="wrap_content"
                 android:max="10"
                 android:progress="2"
-                android:thumbTint="@color/teal_primary"
-                android:progressTint="@color/teal_primary"/>
+                android:thumbTint="@color/primary"
+                android:progressTint="@color/primary"/>
 
             <TextView
                 android:id="@+id/decimalValueText"
@@ -126,7 +126,7 @@
                 android:layout_height="wrap_content"
                 android:text="2"
                 android:textSize="16sp"
-                android:textColor="@color/black"
+                android:textColor="@color/text_primary"
                 android:paddingTop="4dp"/>
         </LinearLayout>
     </ScrollView>
