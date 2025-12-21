@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
+    android:background="@color/bg_main"
     tools:context=".conversion">
 
         <TextView
@@ -14,10 +15,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Converter"
-            android:layout_marginTop="0dp"
+            android:layout_marginTop="12dp"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:textColor="#111827"
+            android:textColor="@color/text_primary"
             android:layout_gravity="center"
             android:paddingBottom="20dp"
             />
@@ -31,8 +32,8 @@
             android:textSize="16sp"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
-            android:textColor="#111827"
-            android:textColorHint="#9CA3AF"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
             android:background="@drawable/input_box" />
 
         <LinearLayout
@@ -49,9 +50,9 @@
                 android:layout_weight="3"
                 android:padding="10dp"
                 android:spinnerMode="dropdown"
+                android:dropDownWidth="match_parent"
                 android:background="@drawable/spinner_box"
                 android:layout_marginStart="5dp"/>
-
             <ImageButton
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -69,11 +70,12 @@
                 android:layout_weight="3"
                 android:padding="10dp"
                 android:spinnerMode="dropdown"
+                android:dropDownWidth="match_parent"
                 android:background="@drawable/spinner_box"
                 android:layout_marginEnd="5dp"
                 />
         </LinearLayout>
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnConvert"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -81,8 +83,9 @@
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_marginTop="24dp"
-            android:background="#4F46E5"
-            android:textColor="#FFFFFF"
+            app:cornerRadius="0dp"
+            android:backgroundTint="@color/primary"
+            android:textColor="@color/bg_main"
             android:padding="14dp"
             android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
@@ -105,20 +108,15 @@
                 android:textSize="26sp"
                 android:textStyle="bold"
                 android:background="@android:color/transparent"
-                android:textColor="#4F46E5" />
+                android:textColor="@color/primary" />
 
-            <TextView
-                android:id="@+id/unitName"
+            <Space
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Unit"
-                android:textSize="16sp"
-                android:textColor="#111827"
-                android:background="@android:color/transparent"
-                android:layout_marginTop="8dp"/>
+                android:layout_height="25dp"
+                />
         </LinearLayout>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnCopy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -126,8 +124,9 @@
             android:textStyle="bold"
             android:textSize="18sp"
             android:layout_marginTop="16dp"
-            android:background="#4F46E5"
-            android:textColor="#FFFFFF"
+            app:cornerRadius="0dp"
+            android:backgroundTint="@color/primary"
+            android:textColor="@color/bg_main"
             android:padding="14dp"
             android:layout_gravity="center"
             android:layout_marginStart="5dp"
