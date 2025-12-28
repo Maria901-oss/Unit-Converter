@@ -76,10 +76,6 @@ class MainActivity : AppCompatActivity() {
                 }
                 true
             }
-            R.id.help->{
-                Toast.makeText(this,"help clicked",Toast.LENGTH_SHORT).show()
-                true
-            }
             else -> super.onOptionsItemSelected(item)
         }
 

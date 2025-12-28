@@ -299,10 +299,6 @@ private lateinit var btnCopy: Button
                 }
                 true
             }
-            R.id.help->{
-                Toast.makeText(this,"FAQS clicked",Toast.LENGTH_SHORT).show()
-                true
-            }
             else -> super.onOptionsItemSelected(item)
         }
 
