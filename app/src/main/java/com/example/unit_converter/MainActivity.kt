@@ -69,15 +69,10 @@ class MainActivity : AppCompatActivity() {
                     val intent = Intent(Intent.ACTION_VIEW, uri)
                     startActivity(intent)
                 } catch (e: Exception) {
-                    // If Play Store not available, open browser
                     val uri = Uri.parse("https://play.google.com/store/apps/details?id=$packageName")
                     val intent = Intent(Intent.ACTION_VIEW, uri)
                     startActivity(intent)
                 }
-                true
-            }
-            R.id.help->{
-                Toast.makeText(this,"help clicked",Toast.LENGTH_SHORT).show()
                 true
             }
             else -> super.onOptionsItemSelected(item)
