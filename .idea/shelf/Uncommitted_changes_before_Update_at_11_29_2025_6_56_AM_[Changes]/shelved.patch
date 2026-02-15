@@ -1,0 +1,71 @@
+Index: app/src/main/res/layout/activity_category_screen.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><GridLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    android:columnCount=\"2\"\r\n    android:rowCount=\"2\"\r\n    android:padding=\"20dp\"\r\n    android:background=\"#F7F9FC\">\r\n\r\n    <Button\r\n        android:id=\"@+id/btnLength\"\r\n        android:layout_width=\"0dp\"\r\n        android:layout_height=\"120dp\"\r\n        android:layout_columnWeight=\"1\"\r\n        android:text=\"Length\\nطول\"\r\n        android:textSize=\"18sp\"\r\n        android:background=\"@drawable/card_design\"/>\r\n\r\n    <Button\r\n        android:id=\"@+id/btnWeight\"\r\n        android:layout_width=\"0dp\"\r\n        android:layout_height=\"120dp\"\r\n        android:layout_columnWeight=\"1\"\r\n        android:text=\"Weight\\nوزن\"\r\n        android:textSize=\"18sp\"\r\n        android:background=\"@drawable/card_design\"/>\r\n\r\n    <Button\r\n        android:id=\"@+id/btnTemp\"\r\n        android:layout_width=\"0dp\"\r\n        android:layout_height=\"120dp\"\r\n        android:layout_columnWeight=\"1\"\r\n        android:text=\"Temperature\\nدرجہ حرارت\"\r\n        android:textSize=\"18sp\"\r\n        android:background=\"@drawable/card_design\"/>\r\n\r\n    <Button\r\n        android:id=\"@+id/btnVolume\"\r\n        android:layout_width=\"0dp\"\r\n        android:layout_height=\"120dp\"\r\n        android:layout_columnWeight=\"1\"\r\n        android:text=\"Volume\\nحجم\"\r\n        android:textSize=\"18sp\"\r\n        android:background=\"@drawable/card_design\"/>\r\n\r\n</GridLayout>\r\n
+===================================================================
+diff --git a/app/src/main/res/layout/activity_category_screen.xml b/app/src/main/res/layout/activity_category_screen.xml
+--- a/app/src/main/res/layout/activity_category_screen.xml	(revision 1c4a3f1c143bdd35ad8f15bacb3acc648ca54595)
++++ b/app/src/main/res/layout/activity_category_screen.xml	(date 1763965381035)
+@@ -2,44 +2,55 @@
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:columnCount="2"
+-    android:rowCount="2"
+     android:padding="20dp"
+-    android:background="#F7F9FC">
++    android:background="#FFFFFF">
+ 
+     <Button
+         android:id="@+id/btnLength"
+         android:layout_width="0dp"
+         android:layout_height="120dp"
+         android:layout_columnWeight="1"
+-        android:text="Length\nطول"
++        android:layout_rowWeight="1"
++        android:text="Length"
+         android:textSize="18sp"
+-        android:background="@drawable/card_design"/>
++        android:background="@drawable/card_design"
++        android:textColor="#000000"
++        >
+ 
+     <Button
+         android:id="@+id/btnWeight"
+         android:layout_width="0dp"
+         android:layout_height="120dp"
+         android:layout_columnWeight="1"
++        android:layout_rowWeight="1"
+         android:text="Weight\nوزن"
+         android:textSize="18sp"
+-        android:background="@drawable/card_design"/>
++        android:background="@drawable/card_design"
++        android:textColor="#000000"
++        >
+ 
+     <Button
+         android:id="@+id/btnTemp"
+         android:layout_width="0dp"
+         android:layout_height="120dp"
+         android:layout_columnWeight="1"
++        android:layout_rowWeight="1"
+         android:text="Temperature\nدرجہ حرارت"
+         android:textSize="18sp"
+-        android:background="@drawable/card_design"/>
++        android:background="@drawable/card_design"
++        android:textColor="#000000"
++        >
+ 
+     <Button
+         android:id="@+id/btnVolume"
+         android:layout_width="0dp"
+         android:layout_height="120dp"
+         android:layout_columnWeight="1"
++        android:layout_rowWeight="1"
+         android:text="Volume\nحجم"
+         android:textSize="18sp"
+-        android:background="@drawable/card_design"/>
++        android:background="@drawable/card_design"
++        android:textColor="#000000"
++        />
+ 
+ </GridLayout>
